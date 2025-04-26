@@ -1,66 +1,33 @@
 # Reto Técnico: Procesamiento de Transacciones Bancarias (CLI)
 
-## Objetivo:
+## :clipboard: Introducción:
 
-Desarrolla una aplicación de línea de comandos (CLI) que procese un archivo CSV con transacciones bancarias y genere un reporte que incluya:
+El propósito de este reto es generar un reporte que indique el balance final, la transacción de mayor monto y la cantidad de operaciones por tipo.
 
-- **Balance Final:**  
-  Suma de los montos de las transacciones de tipo "Crédito" menos la suma de los montos de las transacciones de tipo "Débito".
+## :computer: Instrucciones de Ejecución:
 
-- **Transacción de Mayor Monto:**  
-  Identificar el ID y el monto de la transacción con el valor más alto.
+El programa utiliza el lenguaje Python, específicamente fue construido con la versión 3.13, no se requiere la instalación de dependencias.
 
-- **Conteo de Transacciones:**  
-  Número total de transacciones para cada tipo ("Crédito" y "Débito").
+Para ejecutar el programa utilice el comando `python main.py`
 
----
 
-## Instrucciones
+## :mag: Enfoque y Solución:
 
-1. **Repositorio Base:**  
-   Clona o haz un fork del repositorio base disponible en:  
-   `https://github.com/codeableorg/interbank-academy-25`
+El programa fue desarrollado con un enfoque en simplicidad y eficiencia, la lógica se presenta a continuación:
+1. Se definen constantes útiles para la ejecución del programa. Esto permitirá actualizar rápidamente valores utilizados para la gestión del archivo `CSV`.
+2. Se definen las variables que se utilizarán para almacenar los resultados que se incluirán en el reporte.
+3. El programa inicia con la apertura del archivo `CSV` que contiene los datos de entrada, así mismo, se invoca a una función que validará los tipos de datos que se requieren para la elaboración del reporte.
+4. Dependiendo del tipo de transacción se sumará o restará el monto al balance y se aumentará en una unidad la cantidad de transacciones según el tipo (Débito o Crédito).
+5. Se realiza una comparación del monto de la fila que se está leyendo con la última transacción más alta que se almacenó.
+6. Se imprimen los resultados.
 
-2. **Entrada de Datos:**  
-   La aplicación deberá leer un archivo CSV. Ejemplo de contenido:
+## :hammer: Estructura del Proyecto:
 
-   ```
-   id,tipo,monto
-   1,Crédito,100.00
-   2,Débito,50.00
-   3,Crédito,200.00
-   4,Débito,75.00
-   5,Crédito,150.00
-   ```
+El proyecto tiene una estructura simple en la cuál el programa y el archivo con los datos de entrada se encuentran en la raíz, a continuación se muestra el esquema de archivos que encontrará:
 
-3. **Salida del Programa:**  
-   La aplicación debe mostrar el reporte final en la terminal.  
-   Ejemplo de salida:
-
-   ```
-   Reporte de Transacciones
-   ---------------------------------------------
-   Balance Final: 325.00
-   Transacción de Mayor Monto: ID 3 - 200.00
-   Conteo de Transacciones: Crédito: 3 Débito: 2
-   ```
-
-4. **Lenguaje de Programación:**  
-   Utiliza el lenguaje de tu preferencia. Opciones recomendadas:
-
-   - Python
-   - Java
-   - C#
-   - JavaScript (Node.js)
-
-5. **README del Proyecto:**  
-   Incluye un archivo `README.md` con la siguiente estructura:
-
-   - **Introducción:** Breve descripción del reto y su propósito.
-   - **Instrucciones de Ejecución:** Cómo instalar dependencias y ejecutar la aplicación.
-   - **Enfoque y Solución:** Lógica implementada y decisiones de diseño.
-   - **Estructura del Proyecto:** Archivos y carpetas principales.
-
-6. **Documentación y Calidad del Código:**
-   - Código bien documentado y fácil de leer.
-   - Comentarios explicando pasos clave y lógica del programa.
+```
+  /interbank-academy-25
+   │── data.csv               # Archivo de datos
+   │── main.py                # Programa
+   │── README.md              # Presentación
+```
