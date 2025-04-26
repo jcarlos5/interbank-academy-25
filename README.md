@@ -8,7 +8,10 @@ El propósito de este reto es generar un reporte que indique el balance final, l
 
 El programa utiliza el lenguaje Python, específicamente fue construido con la versión 3.13, no se requiere la instalación de dependencias.
 
-Para ejecutar el programa utilice el comando `python main.py`
+Para ejecutar el programa utilice el comando 
+```bash
+python main.py
+```
 
 
 ## :mag: Enfoque y Solución:
